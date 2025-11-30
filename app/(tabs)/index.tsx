@@ -1,26 +1,35 @@
-import { StyleSheet } from 'react-native';
-
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
+import { StyleSheet, Text, View, TextInput } from 'react-native';
 
 export default function HomeScreen() {
   return (
-    <ThemedView style={styles.container}>
-      <ThemedText type="title" style={styles.title}>Hello World React Native</ThemedText>
-    </ThemedView>
+    <View style={styles.container}>
+      <Text style={styles.title}>Todoアプリ</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="タスクを入力"
+      />
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center', // 横中央
+    alignItems: 'center',     // 横中央
     justifyContent: 'center', // 縦中央
-    backgroundColor:'cyan',//cyan色
+    backgroundColor: 'cyan',
   },
   title: {
-    color:'pink',//rose色
-    fontSize: 50,
-    fontWeight: '800',
-  }
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 20,
+  },
+  input: {
+    width: '50%',
+    height: 40,
+    borderWidth: 3,
+    borderColor: '#FFC107',  // ★ アンバー色
+    backgroundColor: 'white',
+    borderRadius: 6,
+  },
 });
