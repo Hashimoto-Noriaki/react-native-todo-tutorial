@@ -2,3 +2,6 @@
 ```
 npm run start
 ```
+
+### view
+https://reactnative.dev/docs/view
